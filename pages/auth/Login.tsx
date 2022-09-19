@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { setCookie } from "nookies";
-import { UserApi } from "../utils/api";
-import { CreateUserDto } from "../utils/api/types";
-import { useAppDispatch } from "../redux/hooks";
+import { UserApi } from "../../utils/api";
+import { LoginDto } from "../../utils/api/types";
+import { useAppDispatch } from "../../redux/hooks";
+import { setUserData } from "../../redux/slices/user";
 
-const Register = () => {
-  const [fullName, setFullName] = useState("");
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,32 +20,25 @@ const Register = () => {
     console.log(password);
   };
 
-  const handleChangeFullName = (e) => {
-    setFullName(e.target.value);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const dto: CreateUserDto = { fullName, email, password };
+    const dto: LoginDto = { email, password };
     try {
-      const data = await UserApi.register(dto);
+      const data = await UserApi.login(dto);
       console.log(data);
       setCookie(null, "authToken", data.token, {
         maxAge: 30 * 24 * 60 * 60,
         path: "/",
       });
-
       dispatch(setUserData(data));
     } catch (error) {
-      console.warn("Registration Error", error);
+      console.warn("Login Error", error);
     }
   };
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div>Register</div>
-        <label>Fullname</label>
-        <input value={fullName} onChange={handleChangeFullName} />
+        <div>Login</div>
         <label>Email</label>
         <input value={email} onChange={handleChangeEmail} />
         <label>Password</label>
@@ -56,4 +49,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

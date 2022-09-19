@@ -1,12 +1,13 @@
 import type { GetServerSideProps, NextPage } from "next";
 import { parseCookies } from "nookies";
-import SignIn from "../components/SignIn";
+import Auth from "./auth/index";
 import { setUserData } from "../redux/slices/user";
 import { wrapper } from "../redux/store";
 import { UserApi } from "../utils/api";
+import MainLayout from "../layouts/MainLayout";
 
 const Home: NextPage = () => {
-  return <SignIn />;
+  return <div>hello</div>;
 };
 
 export default Home;

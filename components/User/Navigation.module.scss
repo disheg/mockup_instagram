@@ -1,0 +1,21 @@
+.navigation {
+  position: sticky;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 15px 15px 15px;
+  background-color: #ffffff;
+
+  img {
+    width: 28px;
+    height: 28px;
+
+    &.publishIcon {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

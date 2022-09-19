@@ -1,0 +1,92 @@
+.container {
+  display: block;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../../../public/background-auth.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+  }
+
+  a {
+    color: #43a2fa;
+  }
+}
+
+.signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+}
+
+.header {
+  line-height: 16px;
+  text-align: center;
+
+  p {
+    color: #9797bd;
+  }
+}
+
+.formSignin {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 35px 0 35px;
+  font-size: 13px;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #b4b4b4;
+    border-radius: 14px;
+    padding: 20px 10px 20px 50px;
+    font-size: 14px;
+
+    &.email {
+      background: url("/auth/Email.png") no-repeat 10px;
+    }
+    &.password {
+      background: url("/auth/Password.png") no-repeat 10px;
+    }
+  }
+
+  button {
+    padding: 20px 0 20px 0;
+    border-radius: 14px;
+    align-items: center;
+    color: #ffffff;
+    background-color: #262626;
+  }
+}
+
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .passwordLabel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

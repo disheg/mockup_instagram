@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 6px 13px 6px 13px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  p {
+    font-size: 18px;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.card {
+  margin-top: 10px;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 15px 10px 15px;
+
+  .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+.moreIcon {
+  height: 24px;
+  width: 24px;
+}
+
+.cardBody {
+  position: relative;
+  img {
+    width: 100%;
+  }
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: calc(100% - 32px);
+  position: absolute;
+  bottom: 10px;
+  align-items: center;
+  margin: 0 16px 10px 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+}
+
+.cardFooterElement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px 14px 5px 14px;
+  gap: 5px;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
